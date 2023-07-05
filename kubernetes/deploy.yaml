@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dimmadome
+spec:
+  selector:
+    matchLabels:
+      app: dimmadome
+  template:
+    metadata:
+      labels:
+        app: dimmadome
+    spec:
+      containers:
+      - name: dimmadome
+        image: registry.gitlab.com/ecimino/dimmado.me:0.1.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "50m"
+        ports:
+        - containerPort: 80
+          name: http
