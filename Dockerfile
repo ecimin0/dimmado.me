@@ -6,5 +6,5 @@ RUN rm -fr /usr/share/nginx/html/*
 
 COPY ./www/ /usr/share/nginx/html
 
-COPY ./site/custom-default.conf /etc/nginx/conf.d/default.conf
+COPY ./www/custom-default.conf /etc/nginx/conf.d/default.conf
 
