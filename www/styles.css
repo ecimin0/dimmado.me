@@ -1,6 +1,7 @@
 body {
     /* background-color: #4cd5ff; */
-    background-image: -moz-linear-gradient(bottom, #71644c, #51ff85, #67e3ff, #337aff, #090010);
+    /* background-image: -moz-linear-gradient(bottom, #71644c, #51ff85, #67e3ff, #337aff, #090010); */
+    background-image: -webkit-linear-gradient(bottom, #71644c, #51ff85, #67e3ff, #337aff, #090010);
     margin: 0;
     margin-bottom: 1010px;
     padding: 0;
