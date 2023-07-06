@@ -1,12 +1,14 @@
+html {
+    overflow: auto;
+    overscroll-behavior: none;
+}
+
 body {
-    /* background-color: #4cd5ff; */
-    /* background-image: -moz-linear-gradient(bottom, #71644c, #51ff85, #67e3ff, #337aff, #090010); */
+    overflow: visible;
     background-image: -webkit-linear-gradient(bottom, #71644c, #51ff85, #67e3ff, #337aff, #090010);
     margin: 0;
     margin-bottom: 1010px;
     padding: 0;
-    /* overflow: visible; */
-    /* min-width: 1200px; */
 }
 
 #content {
@@ -28,67 +30,18 @@ body {
     font-weight: bolder;
 }
 
-/* #img-container { */
-/* position: absolute; */
-/* bottom: 0; */
-/* left: 25%; */
-/* width: auto; */
-/* text-align: center; */
-/* transform: scale(0.80); */
-/* z-index: 20; */
-/* min-width: max-content; */
-/* } */
-
-#img-container img {
-    /* max-width: 100%; */
-    position: absolute;
-    bottom: 0;
-    /* left: 25%; */
-    width: auto;
-    text-align: center;
-    /* transform: scale(0.80); */
-    z-index: 20;
-    /* min-width: max-content; */
-}
-
-/* 
-.rectangle {
-    position: relative;
-    margin: 140px;
-    height: 10000px;
-    width: 195px;
-    background-color: #fff;
-    border-color: #000;
-    border-style: solid;
-    border-width: 10px;
-    margin-top: -400px;
-    z-index: 10;
-} */
-
-
 .container {
     position: relative;
     width: 248px;
     height: 1000000px;
-    /* min-height: 100%; */
-    overflow: visible;
 }
 
 .rectangle {
     position: absolute;
     bottom: -130px;
-    /* Adjust the bottom value to move the bottom up */
-
     left: 462px;
-    /* Adjust the left value to move the rectangle to the right */
-
     width: calc(100% - 50px);
-    /* Adjust the width to match the container minus the left value */
-
-    /* height: calc(100% - 50px); */
     height: 200%;
-    /* Adjust the height to match the container minus the bottom value */
-
     background-color: #fff;
     border-color: #000;
     border-style: solid;
@@ -101,5 +54,5 @@ body {
     top: 100%;
     left: 250px;
     bottom: 0;
-    /* Additional image styles */
+    /* transform: scale(0.80); */
 }
