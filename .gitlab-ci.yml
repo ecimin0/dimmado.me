@@ -48,6 +48,5 @@ commit:
     - git checkout -B "$CI_COMMIT_REF_NAME" "$CI_COMMIT_SHA"
     # - git pull "https://gitlab_ci_pat:$GITLAB_CI_PAT@$CI_SERVER_HOST/$CI_PROJECT_PATH.git" $CI_COMMIT_BRANCH
     - sed -ri "s@dimmado.me\:1.0.0@dimmado.me${tag}@g" kubernetes/deploy.yaml
-    - git add kubernetes/deploy.yaml && git commit -m "update image tag via CI" && git push
-    - git commit -a -m "[skip-ci] update via gitlab ci"
-    - git push origin HEAD:main "https://gitlab_ci_pat:$GITLAB_CI_PAT@$CI_SERVER_HOST/$CI_PROJECT_PATH.git" HEAD:$CI_COMMIT_BRANCH
+    - git add kubernetes/deploy.yaml && git commit -a -m "[skip-ci] update via gitlab ci" && git push --set-upstream origin main
+    # - git push origin HEAD:main "https://gitlab_ci_pat:$GITLAB_CI_PAT@$CI_SERVER_HOST/$CI_PROJECT_PATH.git" HEAD:$CI_COMMIT_BRANCH
