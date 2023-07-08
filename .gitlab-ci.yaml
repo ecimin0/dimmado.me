@@ -1,0 +1,14 @@
+build-container-image:
+  stage: build
+  image: ubuntu:jammy
+  before_script:
+    - apt-get update
+    - apt-get install -y buildah ca-certificates
+    - |
+      # Switch to iptables legacy, as GitLab CI doesn't support nftables.
+      apt-get install -y --no-install-recommends iptables
+      update-alternatives --set iptables /usr/sbin/iptables-legacy
+  script:
+    - buildah build -t $CI_REGISTRY_IMAGE .
+    - buildah login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
+    - buildah push $CI_REGISTRY_IMAGE
