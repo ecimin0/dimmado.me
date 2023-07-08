@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: dimmadome
-        image: registry.gitlab.com/ecimino/dimmado.me:082fae97
+        image: registry.gitlab.com/ecimino/dimmado.me:e3fcb97c:082fae97
         resources:
           limits:
             memory: "128Mi"
