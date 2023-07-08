@@ -16,9 +16,9 @@ docker-build:
   stage: build
   services:
     - docker:dind
-    - git
   before_script:
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+    - apt-get update && apt-get install -y git
     - git config user.name "$GITLAB_USER_NAME"
     - git config user.email "$GITLAB_USER_EMAIL"
   # Default branch leaves tag empty (= latest tag)
