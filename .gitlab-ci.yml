@@ -31,8 +31,6 @@ docker-build:
       fi
     - docker build --pull -t "$CI_REGISTRY_IMAGE${tag}" .
     - docker push "$CI_REGISTRY_IMAGE${tag}"
-    - sed -ri "s@dimmado.me\:1.0.0@dimmado.me${tag}@g" kubernetes/deploy.yaml
-    - git add kubernetes/deploy.yaml && git commit -m "update image tag via CI" && git push
   # Run this job in a branch where a Dockerfile exists
   rules:
     - if: $CI_COMMIT_BRANCH
